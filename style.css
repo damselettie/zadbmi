@@ -1,0 +1,62 @@
+
+
+.niedowaga{
+    background-color: lightblue;
+}
+
+.normal{
+    background-color: lightgreen;
+}
+
+.nadwaga{
+    background-color: orange;
+}
+
+.otylosc{
+    background-color: red;
+}
+.waga{
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+input,label{
+    margin-top: 10px;
+}
+
+button{
+    margin-top: 10px;
+    background-color: pink;
+}
+h3{
+    font-size: 0.8em;
+    margin: 20px;
+   
+}
+body{
+    background: radial-gradient(circle,rgba(255, 176, 176, 1) 0%, rgba(139, 214, 160, 1) 100%);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wynik{
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color: #333;
+    text-align: center;
+}
