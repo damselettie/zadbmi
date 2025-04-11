@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <label for="Wzrost">Wzrost</label>
+    <input type="text" name="wzrost" id="wzrost">
+    <label for="Waga">Waga</label>
+    <input type="text" name="waga" id="waga">
+    <button id="przycisk" onclick="Oblicz()">Oblicz</button>
+    <h3 id="wynik"></h3>
+
+    <input type="checkbox" name="6test" id="">
+    <input type="checkbox" name="testtest" id="">
+
+</div>
+</body>
+</html>
+
+<script>
+    function Oblicz(){
+        var wzrost = document.getElementById("wzrost").value;
+        var waga = document.getElementById("waga").value;
+        var wynik = document.getElementById("wynik");
+        var przycisk = document.createElement("button");
+         convertedWzrost = parseFloat(wzrost)/100;
+         convertedWaga = parseFloat(waga);
+  
+        var BMI = convertedWaga / (convertedWzrost ** 2);
+        wynik.innerHTML = "Twoje BMI wynosi: " + BMI;
+        if (BMI < 18.5) {
+            wynik.innerHTML += "<br> Niedowaga";
+           wynik.classList.add('niedowaga');
+        } else if (BMI >= 18.5 && BMI < 24.9) {
+            wynik.innerHTML += "<br> Waga prawidłowa";
+            wynik.classList.add('normal');
+        } else if (BMI >= 25 && BMI < 29.9) {
+            wynik.innerHTML += "<br> Nadwaga";
+            wynik.classList.add('nadwaga');
+        } else {
+            wynik.classList.add('otylosc');
+            wynik.innerHTML += "<br> Otyłość";
+        }
+        przycisk.innerHTML = "Oblicz ponownie";
+}
+</script>
